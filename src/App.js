@@ -14,7 +14,7 @@ function App({children}) {
 
 	const getDB= async () =>{
 		try{
-			const {data} = await axios.get('https://openapi.foodsafetykorea.go.kr/api/d1d505e5857e48eb9a21/COOKRCP01/json/1/100');
+			const {data} = await axios.get('http://openapi.foodsafetykorea.go.kr/api/d1d505e5857e48eb9a21/COOKRCP01/json/1/100');
 			const {COOKRCP01: {row}} =data;
 			const initData = row.map((item) => ({
 				...item,
